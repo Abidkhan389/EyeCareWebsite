@@ -45,7 +45,7 @@ import { ContactPageThreeComponent } from './pages/contact-page-three/contact-pa
 import { NotFoundComponent } from './common/not-found/not-found.component';
 
 export const routes: Routes = [
-    {path: '', component: HomeDemoOneComponent},
+    {path: '', component: HomeDemoSixComponent},
     {path: 'index-2', component: HomeDemoTwoComponent},
     {path: 'index-3', component: HomeDemoThreeComponent},
     {path: 'index-4', component: HomeDemoFourComponent},

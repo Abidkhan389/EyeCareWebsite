@@ -32,13 +32,15 @@
                             }
                         ],
                         "styles": [
-                            "node_modules/animate.css/animate.min.css",
-                            "node_modules/boxicons/css/boxicons.min.css",
-                            "public/fonts/flaticon_inba.css",
-                            "node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss",
-                            "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
-                            "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
-                            "src/styles.scss"
+                          "@angular/material/prebuilt-themes/azure-blue.css",
+                          "node_modules/animate.css/animate.min.css",
+                          "node_modules/boxicons/css/boxicons.min.css",
+                          "public/fonts/flaticon_inba.css",
+                          "node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss",
+                          "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
+                          "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+                          "src/styles.scss",
+                          "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
                         ],
                         "scripts": [],
                         "server": "src/main.server.ts",
@@ -102,7 +104,8 @@
                             }
                         ],
                         "styles": [
-                            "src/styles.scss"
+                          "@angular/material/prebuilt-themes/azure-blue.css",
+                          "src/styles.scss"
                         ],
                         "scripts": []
                     }

@@ -5,10 +5,10 @@
 >
     <div class="container">
         <div class="page-banner-content">
-            <h2>Dentist/Doctor Details</h2>
+            <h2>EyeSpecilist/Doctor Details</h2>
             <ul class="pages-list">
                 <li><a routerLink="/">Home</a></li>
-                <li>Dentist/Doctor Details</li>
+                <li>EyeSpecilist/Doctor Details</li>
             </ul>
         </div>
     </div>
@@ -25,8 +25,8 @@
             </div>
             <div class="col-lg-7 col-md-12">
                 <div class="dentist-details-content">
-                    <h3>Dr. Johnson Melbourne</h3>
-                    <span class="designation">Prosthodontics Dentist</span>
+                    <h3>{{doctorDetails?.name}}</h3>
+                    <span class="designation">{{doctorDetails?.designation}}</span>
                     <div class="share-link">
                         <a href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
                         <a href="https://twitter.com/?lang=en" target="_blank"><i class='bx bxl-twitter'></i></a>
@@ -34,17 +34,18 @@
                         <a href="https://www.instagram.com/" target="_blank"><i class='bx bxl-instagram'></i></a>
                     </div>
                     <div class="content-overview">
-                        <p><span>Qualification:</span> MDS, BDS - Periodontology and Oral Implantology, 5 Years Experience</p>
-                        <p><span>Certification:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <p><span>Professional Skills:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <p><span>Education:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                        <p><span>Awards:</span> National Specialist Register in Dental</p>
+                        <p><span>Qualification:</span> {{doctorDetails?.qualification}}</p>
+                        <p><span>Certification:</span>{{doctorDetails?.qualification}}</p>
+                        <p><span>Professional Skills:</span> {{doctorDetails?.professionalSkills}}</p>
+                        <p><span>Education:</span> {{doctorDetails?.education}}</p>
+                        <p><span>Awards</span>  {{doctorDetails?.awards}}</p>
+                       
                     </div>
                 </div>
             </div>
         </div>
         <div class="dentist-details-overview-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>{{doctorDetails?.generalInfo}}</p>
             <div class="row">
                 <div class="col-lg-6 col-md-6">
                     <div class="details-overview-image">
@@ -57,11 +58,12 @@
                     </div>
                 </div>
             </div>
-            <div class="overview-text">
-                <p><span>How to Take Care During Dental:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of psum is that it has a more or-less normal distribution of letters, as opposed to using.</p>
-                <p><span>When To Visit your Doctor?</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of psum is that it has a more or-less normal distribution of letters, as opposed to using.</p>
-                <p><span>Dental Options:</span> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of psum is that it has a more or-less normal distribution of letters, as opposed to using.</p>
-            </div>
+            <div class="overview-text" *ngIf="doctorDetails?.careInstructions?.length">
+                <p *ngFor="let instruction of doctorDetails?.careInstructions">
+                  <span>{{ instruction?.title }}</span> {{ instruction?.content }}
+                </p>
+              </div>
+              
         </div>
     </div>
 </div>
