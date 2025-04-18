@@ -44,6 +44,249 @@ export interface DoctorDetails {
       
     },
     {
+      name: 'Dr. Ena Dicrosa',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Ena Dicrosa is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Johnson Melbourne',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Johnson Melbourne is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Addison Smith',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Addison Smith is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Daisy Gabriela',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Daisy Gabriela is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Ronnie Aaron',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Ronnie Aaron is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Edie Dee',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Edie Dee is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Sarah Taylor',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Sarah Taylor is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Aiken Ward',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Aiken Ward is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
+      name: 'Dr. Babatunde Jon',
+      profileImageUrl: 'images/doctor/doctor-1.jpg',
+      qualification: 'MBBS, FCPS (Ophthalmology)',
+      designation: 'Senior Retina Surgeon & Consultant Ophthalmologist',
+      experience:'10 Years Experience',
+      certification: 'Fellowship in Retina Surgery - UK',
+      professionalSkills: ['Retina Surgery', 'Cataract Removal', 'LASIK', 'Glaucoma Management'],
+      education: ['Allama Iqbal Medical College', 'Royal College of Surgeons (UK)'],
+      awards: ['Best Ophthalmologist 2020', 'Pride of Performance in Eye Care 2022'],
+      generalInfo: `Dr. Babatunde Jon is a renowned eye specialist with over 10 years of experience in diagnosing and treating complex retinal disorders. He is particularly known for his precision in retina surgeries and has performed over 2000 successful procedures. His commitment to patient care, research, and medical education has earned him multiple accolades in the field of ophthalmology.`,
+      careInstructions: [
+        {
+          title: 'How to Take Care During Eye Treatment',
+          content: 'Avoid bright light exposure and rest your eyes regularly...'
+        },
+        {
+          title: 'When To Visit your Doctor?',
+          content: 'Visit immediately if you notice vision changes, floaters, or pain...'
+        },
+        {
+          title: 'Eye Treatment Options:',
+          content: 'Retina surgery, laser therapy, or prescription medication may be used...'
+        }
+      ]
+      
+    },
+    {
       name: 'Dr. Abid Khan',
       profileImageUrl: 'images/doctor/doctor-2.jpg',
       qualification: 'MBBS, MS (Ophthalmology)',
@@ -96,6 +339,6 @@ export interface DoctorDetails {
         }
       ]
       
-    },
+    }, 
   ];
   

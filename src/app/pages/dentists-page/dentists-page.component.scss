@@ -1,1 +1,13 @@
 @use "../../common/dentists/dentists.component.scss" as *;
+.doctor-button
+{
+    border: none;
+    background: none;
+    font-weight: normal;
+    color: black; /* default color */
+    cursor: pointer;
+}
+.doctor-button:hover {
+    color: #06a3da;
+    font-weight: bold;
+}
