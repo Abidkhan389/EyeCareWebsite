@@ -64,7 +64,7 @@ export class AppointmentPageComponent {
     selectedFee: number | null = null;
     doctorHolidaysDates: { from: Date; to: Date }[] = [];
 
-    constructor(private patientAppointmentService: PatientAppointmentService, private doctorHolidayService: DoctorHolidayService, private fb: FormBuilder,
+    constructor(private patientAppointmentService: PatientAppointmentService, private fb: FormBuilder,
         public router: Router
     ) {
         this.weekDays = Helpers.enumToArray(DayOfWeek) as { id: number; name: string }[];
@@ -133,7 +133,7 @@ export class AppointmentPageComponent {
     GetSelectedDoctorHolidays(doctorId: any) {
         this.loading = true;
         let model = { DoctorId: String(doctorId) };
-        this.doctorHolidayService.getDoctorHolidayByDoctorIdForPatientAppointment(model).pipe(
+        this.patientAppointmentService.getDoctorHolidayByDoctorIdForPatientAppointment(model).pipe(
             finalize(() => {
                 this.loading = false;
             }))

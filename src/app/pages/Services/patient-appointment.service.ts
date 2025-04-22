@@ -8,17 +8,11 @@ import { environment } from '../../../environments/environment';
 })
 export class PatientAppointmentService {
 
-   private apiUrl = environment.baseUrl + 'Patient';
-   private identityUrl = environment.baseUrl+ 'Account';
+   private apiUrl = environment.baseUrl + 'WebsiteAppointment';
         constructor(private http: HttpClient) {}
-            
-            getAllpatientAppointment(modal: any): Observable<any> {
-              const endpoint = `${this.apiUrl}/GetAllByProc`;
-              return this.http.post<any>(endpoint, modal);
-            }
-            
+           
             getAllDoctors(): Observable<any> {
-              const endpoint = `${this.identityUrl}/GetAllDoctors`;
+              const endpoint = `${this.apiUrl}/GetAllDoctors`;
               return this.http.get<any>(endpoint).pipe(
                 tap(() => console.log("API call started")),
                 catchError(error => {
@@ -28,18 +22,8 @@ export class PatientAppointmentService {
               );
             }
             
-
-            patientAppointmentStatus(modal: any): Observable<any> {
-              const endpoint = `${this.apiUrl}/ActiveInActive`;
-              return this.http.post<any>(endpoint, modal).pipe(
-                finalize(() => {
-                  console.log("API call completed");
-                })
-              );
-            }
             getPatientAppointmentById(modal: any): Observable<any> {
               const params = new HttpParams().set('PatientId', modal.id);
-            
               const endpoint = `${this.apiUrl}/GetPatientById`;
               return this.http.get<any>(endpoint, { params }).pipe(
                 finalize(() => {
@@ -49,7 +33,7 @@ export class PatientAppointmentService {
             }
             getDoctorFeeByDocotorId(doctorId: any): Observable<any> {
               const params = new HttpParams().set('DoctorId', doctorId);
-              const endpoint = `${this.identityUrl}/GetDoctorFeeByDocotorId`;
+              const endpoint = `${this.apiUrl}/GetDoctorFeeByDocotorId`;
               return this.http.get<any>(endpoint, { params }).pipe(
                 finalize(() => {
                   console.log("API call completed");
@@ -66,9 +50,7 @@ export class PatientAppointmentService {
               );
             }
             
-            deleteUsers(ids: any): Observable<boolean> {
-              return this.http.post<boolean>(this.apiUrl+'/Delete', Array.isArray(ids) ? ids : [ids]);
-           }
+          
            getDoctorAppointmentsSlotsOfDay(modal: any): Observable<any> {
             const endpoint = `${this.apiUrl}/GetDoctorAppointmentsSlotsOfDay`;
             return this.http.post<any>(endpoint, modal).pipe( 
@@ -77,6 +59,13 @@ export class PatientAppointmentService {
               })
             );
           }
-         
+          getDoctorHolidayByDoctorIdForPatientAppointment(modal: any): Observable<any> {              
+            const endpoint = `${this.apiUrl}/GetDoctorHolidayByDoctorIdForPatientAppointment`;
+            return this.http.post<any>(endpoint, modal).pipe( 
+              finalize(() => {
+                console.log("API call completed");
+              })
+            );
+          }
            
 }
