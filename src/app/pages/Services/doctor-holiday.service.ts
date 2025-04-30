@@ -1,0 +1,36 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable, finalize } from 'rxjs';
+import { environment } from '../../../environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DoctorHolidayService {
+
+  
+    private apiUrl = environment.baseUrl + 'DoctorHoliday';
+        constructor(private http: HttpClient) {}
+            
+          getAllByProcDoctorHolidays(modal: any): Observable<any> {
+              const endpoint = `${this.apiUrl}/GetAllByProc`;
+              return this.http.post<any>(endpoint, modal);
+            }
+  
+            getByIdDoctorHoliday(modal: any): Observable<any> {
+              const endpoint = `${this.apiUrl}/GetByIdDoctorHoliday`;
+              return this.http.post<any>(endpoint, modal).pipe( 
+                finalize(() => {
+                  console.log("API call completed");
+                })
+              );
+            }
+            getDoctorHolidayByDoctorIdForPatientAppointment(modal: any): Observable<any> {              
+              const endpoint = `${this.apiUrl}/GetDoctorHolidayByDoctorIdForPatientAppointment`;
+              return this.http.post<any>(endpoint, modal).pipe( 
+                finalize(() => {
+                  console.log("API call completed");
+                })
+              );
+            }
+}
