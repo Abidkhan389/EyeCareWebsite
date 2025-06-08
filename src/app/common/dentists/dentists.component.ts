@@ -45,8 +45,8 @@ export class DentistsComponent {
             }
         }
     }
-
     goToDoctorDetails(doctorName: string) {
         this.router.navigate(['/dentist-details'], { queryParams: { name: doctorName } });
       }
+
 }

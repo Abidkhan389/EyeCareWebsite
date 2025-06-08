@@ -1,11 +1,11 @@
 import { DatePipe } from "@angular/common";
 import { Renderer2 } from "@angular/core";
 import { UntypedFormGroup } from "@angular/forms";
-import { DAYS_OF_WEEK } from "angular-calendar";
 import { showErrorMessage } from "./messages";
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { DAYS_OF_WEEK } from "angular-calendar";
 
 export class Helpers {
     constructor(private renderer: Renderer2) { }

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FeaturesComponent } from '../../common/features/features.component';
 import { AppointmentComponent } from '../../common/appointment/appointment.component';
 import { Router, RouterLink } from '@angular/router';
@@ -16,15 +16,23 @@ import { ResultMessages } from '../../common/_helper/constant';
 import { showErrorMessage, showInfoMessage, showSuccessMessage } from '../../common/_helper/messages';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+
+declare const grecaptcha: any;
+declare global {
+  interface Window {
+    captchaResolved: (token: string) => void;
+  }
+}
 
 @Component({
     selector: 'app-appointment-page',
-    imports: [FeaturesComponent, AppointmentComponent, RouterLink, MaterialModule,CommonModule,HttpClientModule],
+    imports: [FeaturesComponent, RouterLink, MaterialModule,CommonModule,HttpClientModule],
     providers: [PatientAppointmentService, DoctorHolidayService],
     templateUrl: './appointment-page.component.html',
     styleUrls: ['./appointment-page.component.scss']
 })
-export class AppointmentPageComponent {
+export class AppointmentPageComponent implements OnInit {
     @ViewChild('scrollContainer', { static: false }) scrollContainer!: ElementRef;
     isreadOnly: boolean = false;
     PatientForm !: FormGroup;
@@ -64,6 +72,11 @@ export class AppointmentPageComponent {
     selectedFee: number | null = null;
     doctorHolidaysDates: { from: Date; to: Date }[] = [];
 
+    captchaToken: string | null = null;
+    submitted = false;
+    captchaError = false;
+    siteKey =environment.googlecapachakey; //'6LeEGVgrAAAAAPs1Z9im9SlBfvHeg09CRP4UgNOX'; 
+
     constructor(private patientAppointmentService: PatientAppointmentService, private fb: FormBuilder,
         public router: Router
     ) {
@@ -71,9 +84,14 @@ export class AppointmentPageComponent {
         this.genderType = Helpers.enumStringToArray(Gendertype) as { id: string; name: string }[];
         this.materialType = Helpers.enumStringToArray(MaterialType) as { id: string; name: string }[];
     }
+
     ngOnInit(): void {
         this.validateform();
         this.GetAllDoctors();
+        window.captchaResolved = (token: string) => {
+            this.captchaToken = token;
+            this.captchaError = false;
+          };
     }
     validateform() {
         // const now = new Date();
@@ -86,7 +104,7 @@ export class AppointmentPageComponent {
             gender: [null, Validators.required],
             doctorId: [null, Validators.required],
             doctorFee: [null, Validators.required],
-            age: ['', Validators.compose([NoWhitespaceValidator, Validators.required, Validators.pattern(Patterns.Num), Validators.minLength(11), Validators.maxLength(11)])],
+            age: ['', Validators.compose([NoWhitespaceValidator, Validators.required, Validators.pattern(Patterns.Num), Validators.maxLength(3)])],
             appoitmentDate: ['', Validators.compose([NoWhitespaceValidator, Validators.required])],
             timeSlot: ['', Validators.compose([NoWhitespaceValidator, Validators.required])],
             phoneNumber: ['', Validators.compose([NoWhitespaceValidator, Validators.required, Validators.pattern(Patterns.Num), Validators.minLength(11), Validators.maxLength(11)])],
@@ -151,7 +169,16 @@ export class AppointmentPageComponent {
                 });
     }
     AddEdit() {
-
+        debugger;
+        //this.submitted = true;
+        // if (!this.captchaToken) {
+        //     this.captchaError = true;
+        //     return;
+        //   }
+        if (this.PatientForm.invalid) {
+            this.PatientForm.markAllAsTouched(); // Triggers error messages
+            return;
+          }
         this.loading = true;
         this.handleDateTimeSelection();
         let model = Object.assign({}, this.PatientForm.getRawValue());
@@ -159,7 +186,10 @@ export class AppointmentPageComponent {
 
         this.patientAppointmentService.addEditpatientAppointment(model).subscribe((data: any) => {
             if (data.success) {
-                showSuccessMessage(data.message);
+                showSuccessMessage(data.message).then(() => {
+                    this.loading = false;
+                    this.router.navigate(['/']);
+                  });
             }
             else {
                 showErrorMessage(data.message);
