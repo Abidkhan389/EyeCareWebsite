@@ -169,7 +169,6 @@ export class AppointmentPageComponent implements OnInit {
                 });
     }
     AddEdit() {
-        debugger;
         //this.submitted = true;
         // if (!this.captchaToken) {
         //     this.captchaError = true;

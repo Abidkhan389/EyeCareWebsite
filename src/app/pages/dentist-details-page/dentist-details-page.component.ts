@@ -22,6 +22,5 @@ export class DentistDetailsPageComponent implements OnInit {
     }
     getDoctorDetails(name: string) {
       this.doctorDetails = DOCTOR_DATA.find(doc => doc.name === name);
-      debugger;
     }
 }
