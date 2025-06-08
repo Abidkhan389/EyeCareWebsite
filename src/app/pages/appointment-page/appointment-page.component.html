@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<app-features />
+<!-- <app-features /> -->
 
 <div *ngIf="loading" class="loading-spinner-overlay">
     <mat-spinner></mat-spinner>
@@ -269,11 +269,20 @@
             </mat-form-field>
         </div>
     </div>
+    
      <!-- Modal Footer -->
-     <div class="modal-footer d-flex justify-content-end">
-       
-        <button mat-raised-button  type="submit" class=" AppointmentButtonColour"
-            [disabled]="PatientForm.invalid">
+     <div class="modal-footer d-flex justify-content-end">       
+ 
+        <!-- <div class="g-recaptcha"
+            [attr.data-sitekey]="siteKey"
+            data-callback="captchaResolved">
+        </div>
+
+        <div *ngIf="captchaError" style="color:red;">
+            Please complete the CAPTCHA.
+        </div> -->
+
+        <button mat-raised-button  type="submit" class=" AppointmentButtonColour">
           Book An Appointment
         </button>
     </div>

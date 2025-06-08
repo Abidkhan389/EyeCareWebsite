@@ -1,24 +1,24 @@
 <!-- Default Appointment Section -->
 <div
     class="appointment-overview-area pb-100"
-    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4' || router.url === '/index-6' || router.url === '/index-5' || router.url === '/index-8' || router.url === '/appointment' || router.url === '/about-us-3'}"
+    [ngClass]="{'d-none': router.url === '/index-2' || router.url === '/index-3' || router.url === '/index-4' || router.url === '/index-5' || router.url === '/index-8' || router.url === '/appointment' || router.url === '/about-us-3'}"
 >
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-12">
                 <div class="appointment-overview-contact">
-                    <img src="images/appointment/Appointment.jpg" alt="appointment-image">
+                    <img src="images/appointment/appointment-1.png" alt="appointment-image">
                     <div class="appointment-info">
                         <div class="call-info">
                             <i class="flaticon-039-emergency-call"></i>
                             Call Today
                             <span>
-                                <a href="tel:088123654987">
-                                    +923000000000
+                                <a href="tel:92336 4263506">
+                                    +92336 4263506
                                 </a>
                             </span>
                         </div>
-                        <p>Email Us, Go to Contact Us Page,Check out Location or Email.</p>
+                        <p>Contact an experienced and reputable eye surgeon.</p>
                         <a routerLink="/contact-us" class="default-btn">
                             Contact Us
                         </a>
@@ -34,25 +34,16 @@
                                     <i class="flaticon-170-calendar-1"></i>
                                     Make An Appointment
                                 </h4>
-                                <form>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Phone">
-                                    </div>
-                                    <button type="submit" class="default-btn">Book Appointment</button>
-                                </form>
+                                    <p>Your vision matters—don’t wait to take care of your eyes. Book your appointment now with our expert eye surgeon and take the first step toward clearer, healthier sight.</p>
+                                    <br><br><br>
+                                    <button routerLink="/appointment" class="default-btn">Book Appointment</button>                               
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="content">
-                                <h4>We Are a Certified and Award-winning Clinic</h4>
+                                <h4>We Are a Certified and Award-winning Hospital</h4>
                                 <div class="box-image">
-                                    <img src="images/appointment/Appointment2.jpg" alt="appointment-image">
+                                    <img src="images/appointment/appointment-2.png" alt="appointment-image">
                                     <button class="video-btn" (click)="openPopup()">
                                         <i class='bx bx-play'></i>
                                     </button>
@@ -67,7 +58,7 @@
 </div>
 
 <!-- Appointment Section for Home Demo - 2 -->
-<!-- <div
+<div
     class="appointment-area bg-color pb-100 d-none"
     [ngClass]="{'d-block': router.url === '/index-2'}"
 >
@@ -99,10 +90,10 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Appointment Section for Home Demo - 3 -->
-<!-- <div
+<div
     class="appointment-area bg-image ptb-100 d-none"
     style="background-image: url(images/appointment/appointment-bg-2.jpg);"
     [ngClass]="{'d-block': router.url === '/index-3' || router.url === '/appointment'}"
@@ -130,10 +121,10 @@
             </form>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Appointment Section for Home Demo - 4 -->
-<!-- <div
+<div
     class="dental-tourism-appointment-area ptb-100 d-none"
     [ngClass]="{'d-block': router.url === '/index-4' || router.url === '/about-us-3'}"
     style="background-image: url(images/dental-tourism/appointment/appointment-bg.jpg);"
@@ -205,10 +196,10 @@
             </form>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Appointment Section for Home Demo - 5 -->
-<!-- <div
+<div
     class="skin-care-appointment-area d-none"
     [ngClass]="{'d-block': router.url === '/index-5'}"
 >
@@ -291,10 +282,10 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Appointment Section for Home Demo - 8 -->
-<!-- <div
+<div
     class="hospital-appointment-area ptb-100 d-none"
     [ngClass]="{'d-block': router.url === '/index-8'}"
     style="background-image: url(images/hospital/appointment-bg.jpg);"
@@ -376,14 +367,14 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
 <!-- Video Popup -->
-<!-- <div class="video-popup" *ngIf="isOpen">
+<div class="video-popup" *ngIf="isOpen">
     <div class="popup-inner">
         <iframe src="https://www.youtube.com/embed/XNQk1qt__Vw" title="Setup and Local Installation - React Nextjs Online Yoga Coaching &amp; Training Courses System" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <button (click)="closePopup()" type="button" class="close-btn">
             <i class='bx bx-x'></i>
         </button>
     </div>
-</div> -->
+</div>

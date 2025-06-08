@@ -61,7 +61,7 @@ export const routes: Routes = [
     {path: 'dentist-details', component: DentistDetailsPageComponent},
     {path: 'portfolio', component: PortfolioPageComponent},
     {path: 'portfolio-details', component: PortfolioDetailsPageComponent},
-    {path: 'services', component: ServicesPageOneComponent},
+    {path: 'services', component: ServicesPageSixComponent},
     {path: 'services-2', component: ServicesPageTwoComponent},
     {path: 'services-3', component: ServicesPageThreeComponent},
     {path: 'services-4', component: ServicesPageFourComponent},

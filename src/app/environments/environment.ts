@@ -5,7 +5,9 @@
 export const environment = {
   //baseUrl: "https://secp.khazanapk.com/api/",
   baseUrl: "https://localhost:7254/api/",
-  production: false
+  production: false,
+  googlecapachakey:'6LeEGVgrAAAAAPs1Z9im9SlBfvHeg09CRP4UgNOX',
+  googlecapachasecret:'6LdhE1grAAAAAFVZGOuguCb3ZqwhYOBJ_JXZjkI8'
 };
 
 /*
