@@ -138,6 +138,8 @@ export class AppointmentPageComponent implements OnInit {
         this.PatientForm.get('timeSlot')?.setValue(null);
         // ✅ Mark form control as untouched (if necessary)
         this.PatientForm.get('timeSlot')?.markAsUntouched();
+        this.PatientForm.get('appoitmentDate')?.setValue(null);
+        this.PatientForm.get('appoitmentDate')?.markAsUntouched();
 
         // ✅ Fetch holidays
         this.GetSelectedDoctorHolidays(doctorId.toString());
